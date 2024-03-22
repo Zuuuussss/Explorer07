@@ -118,6 +118,11 @@ form button:hover {
 }
 
 /* modal */
+.modal-wrapper.open {
+  opacity: 1;
+  visibility: visible;
+}
+
 .modal-wrapper {
   position: absolute;
   inset: 0;
@@ -174,4 +179,3 @@ form button:hover {
   transform: translatey(-30);
   transition: transform 0.5s;
 }
-
