@@ -18,6 +18,7 @@
 
   --tt-button: white;
   --bg-button: #02799d;
+  --bg-button-hover: #01475c;
 
   --bg-error: #f03e3e;
   --tt-error: white;
@@ -26,7 +27,13 @@
 body {
   font-family: "roboto", sans-serif;
   background-color: #040924;
+}
+
+body,
+input,
+button {
   font-size: 1.6rem;
+  line-height: 2rem;
 }
 .container {
   height: 100vh;
@@ -47,6 +54,10 @@ body {
   font-size: 3.2rem;
   line-height: 4rem;
   color: var(--tt-heading);
+}
+
+form {
+  width: 30rem;
 }
 
 form h1 {
@@ -80,3 +91,87 @@ form input::placeholder {
 .input-wrapper + .input-wrapper {
   margin-top: 1.6rem;
 }
+
+form button {
+  margin-top: 3.2rem;
+  padding: 1.6rem;
+  width: 100%;
+
+  border: none;
+  background-color: var(--bg-button);
+  color: var(--tt-button);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: var(--bg-button-hover);
+}
+
+/* modal */
+.modal-wrapper {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+
+  display: grid;
+  place-content: center;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  position: relative;
+}
+
+.modal button {
+  background: none;
+  border: none;
+
+  position: absolute;
+  top: 1.6rem;
+  right: 1.6rem;
+
+  cursor: pointer;
+
+  transition: transform 0.3s;
+}
+
+.modal button:hover {
+  transform: scale(1.3);
+}
+
+/* alert error */
+.alert-error.open {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.alert-error {
+  position: absolute;
+  background-color: var(--bg-error);
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: var(--tt-error);
+  padding: 0.8rem;
+  font-weight: bold;
+
+  visibility: hidden;
+  opacity: 0;
+  transform: translatey(-30);
+  transition: transform 0.5s;
+}
+
