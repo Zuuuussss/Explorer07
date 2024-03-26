@@ -3,16 +3,16 @@ const form = document.querySelector("form")
 const inputweight = document.querySelector("#weight")
 const inputheight = document.querySelector("#height")
 
-const modalwrapper = document.querySelector(".modal-wrapper")
-const modalmessage = document.querySelector(".modal .tittle span")
-const modalbtnclose = document.querySelector(".modal button.close")
-
 const modal = {
+  wrapper: document.querySelector(".modal-wrapper"),
+  message: document.querySelector(".modal .tittle span"),
+  btnclose: document.querySelector(".modal button.close"),
+
   open() {
-    modalwrapper.classList.add("open")
+    modal.wrapper.classList.add("open")
   },
   close() {
-    modalwrapper.classList.remove("open")
+    modal.wrapper.classList.remove("open")
   },
 }
 
@@ -25,11 +25,11 @@ form.onsubmit = (Event) => {
   const result = IMC(weight, height)
   const message = `Seu IMC é de ${result}`
 
-  modalmessage.innerText = message
+  modal.message.innerText = message
   modal.open()
 }
 
-modalbtnclose.onclick = () => {
+modal.btnclose.onclick = () => {
   modal.close()
 }
 
