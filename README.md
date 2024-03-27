@@ -31,7 +31,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 Um projeto feito para estudos sobre comportamento do Java script introduzido em um pequeno jogo de adivinhação.
 
-- [Acesse o projeto finalizado, online](https://zuuuussss.github.io/jogoadv/)
+- [Acesse o projeto finalizado, online](https://zuuuussss.github.io/IMC/)
 
 Esse projeto está sob a licença MIT.
 
